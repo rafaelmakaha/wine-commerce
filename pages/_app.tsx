@@ -1,6 +1,8 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { createGlobalStyle } from "styled-components";
+import Head from "next/head";
+import Layout from "../src/components/layout/Layout";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -12,7 +14,15 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
-  return <Component {...pageProps} />;
-};
+  <>
+      <GlobalStyle />
+      <Layout>
+        <Head>
+          <title>Wine Commerce</title>
+        </Head>
+        <Component {...pageProps} />
+      </Layout>
+    </>
+}
 
-export default MyApp;
+export default MyApp

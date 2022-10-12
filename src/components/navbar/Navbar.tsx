@@ -6,7 +6,7 @@ function Navbar() {
     <>
       <Nav>
         <Link href={"/"}>
-          <NavItem>TIMER 🍅 POMODORO</NavItem>
+          <NavItem>Wine Commerce</NavItem>
         </Link>
         <NavItemContainer>
           {/* <Link href={"/"}>
