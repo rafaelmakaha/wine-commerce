@@ -1,9 +1,15 @@
-import type { NextPage } from 'next'
+import type { NextPage } from "next";
+import { Container } from "../src/components/common/container.style";
+import Filter from "../src/components/filter/filter";
+import Grid from "../src/components/grid/grid";
 
 const Home: NextPage = () => {
   return (
-    <h1>HELLO</h1>
-  )
-}
+    <Container>
+      <Filter />
+      <Grid />
+    </Container>
+  );
+};
 
-export default Home
+export default Home;
