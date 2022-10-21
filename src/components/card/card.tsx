@@ -1,4 +1,4 @@
-import { CardContainer, CardImage, CardWrapper } from "./card.style";
+import { CardContainer, CardImage } from "./card.style";
 
 
 const Card: React.FC = () => {
