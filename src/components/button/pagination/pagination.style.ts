@@ -12,3 +12,10 @@ export const PagButton = styled.button`
     border: 1px solid ${color.primary.dark_pink};
     border-radius: 3px;
 `
+export const PagWrapper = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 8px;
+    background-color: transparent;
+`
