@@ -1,4 +1,4 @@
-import { Wine } from "./Wine";
+import { Wine } from "./wine";
 
 export interface Catalog {
   page: number;

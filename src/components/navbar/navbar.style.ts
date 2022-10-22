@@ -28,7 +28,6 @@ export const NavItemWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 48px;
-  margin: 0 215px 0 80px;
 `;
 
 export const NavIcon = styled.img<Props>`
