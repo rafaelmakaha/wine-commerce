@@ -1,0 +1,15 @@
+{
+  "primary": {
+    "pink": "#D14B8F",
+    "green": "#7EBC43",
+    "orange": "#F79552",
+    "dark_pink": "#B6116E"
+  },
+  "neutrals": {
+    "white": "#FFFFFF",
+    "light_gray": "#DEDEDE",
+    "gray": "#888888",
+    "dark_gray": "#555555",
+    "black": "#1D1D1B"
+  }
+}
