@@ -6,6 +6,7 @@ interface Props {
 }
 
 export const CardContainer = styled.div`
+  position: relative;
   background-color: ${color.neutrals.white};
   width: 256px;
   height: 333px;
@@ -19,11 +20,19 @@ export const CardContainer = styled.div`
 `;
 
 export const CardImage = styled.img`
-  background-color: gray;
+  background-color: transparent;
   width: 200px;
   height: 178px;
   object-fit: contain;
   margin: 10px 0 0 0;
+`;
+
+export const CardIcon = styled.img`
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 140px;
+  right: 20px;
 `;
 
 export const NameText = styled.p`
@@ -48,7 +57,7 @@ export const PriceText = styled.p<Props>`
         `;
     } else {
       return `
-        color: ${color.neutrals.gray};
+        color: ${color.neutrals.gray};       
         `;
     }
   }}
