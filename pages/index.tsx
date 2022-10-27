@@ -34,7 +34,9 @@ const Home: NextPage = () => {
             </Wrapper>
           ))}
         </Grid>
-        <Pagination number={1} />
+        {catalog &&
+        <Pagination setPagNumber={setPagNumber} numberOfPages={catalog?.totalPages}/>
+        }
       </Wrapper>
     </Container>
   );
