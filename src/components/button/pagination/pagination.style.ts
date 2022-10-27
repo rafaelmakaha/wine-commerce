@@ -11,6 +11,7 @@ export const PagButton = styled.button`
     color: ${color.neutrals.white};
     border: 1px solid ${color.primary.dark_pink};
     border-radius: 3px;
+    cursor: pointer;
 `
 export const PagWrapper = styled.div`
     display: flex;

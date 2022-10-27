@@ -1,5 +1,7 @@
+import { Wine } from "../../types/wine";
 import {
   CardContainer,
+  CardIcon,
   CardImage,
   DiscountText,
   NameText,
@@ -8,20 +10,27 @@ import {
   WrapperH,
 } from "./card.style";
 
-const Card: React.FC = () => {
+const Card: React.FC<Wine> = ({ id, image, name, price, discount, priceMember, priceNonMember  }) => {
+  const priceVip = priceMember.toFixed(2);
+  const integer = Math.trunc(priceMember);
+  const decimal = priceVip.substring(priceVip.length-2, priceVip.length);
+  const priceNonVip = priceNonMember.toFixed(2).replace(".", ",");
+  const defaultPrice = price.toFixed(2).replace(".", ",");
+  
   return (
-    <CardContainer>
-      <CardImage />
-      <NameText>KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK</NameText>
+    <CardContainer key={id} >
+      <CardImage src={image}/>
+      <CardIcon src="/selo.png"/>
+      <NameText>{name}</NameText>
       <WrapperH>
-        <PriceText>R$ 37.80</PriceText>
-        <DiscountText>60% OFF</DiscountText>
+        <PriceText decor>R$ {defaultPrice}</PriceText>
+        <DiscountText>{discount}% OFF</DiscountText>
       </WrapperH>
       <WrapperH>
         <PriceText color="black">Sócio Wine</PriceText>
-        <PriceText color="pink">R$<VipPriceText>30</VipPriceText>,00</PriceText>
+          <PriceText color="pink">R$<VipPriceText>{integer}</VipPriceText>,{decimal}</PriceText>
       </WrapperH>
-        <PriceText>AAAAAAA</PriceText>
+        <PriceText>NÃO SÓCIO R$ {priceNonVip}</PriceText>
     </CardContainer>
   );
 };

@@ -5,5 +5,5 @@ export interface Catalog {
   totalPages: number;
   itemsPerPage: number;
   totalItems: number;
-  items: Array<Wine>;
+  items: Wine[];
 }
