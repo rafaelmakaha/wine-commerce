@@ -11,4 +11,5 @@ export const Button = styled.button`
     border: 1px solid ${color.primary.green};
     border-radius: 4px;
     box-shadow: 0px 0.973384px 1.94677px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 `

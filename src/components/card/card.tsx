@@ -14,8 +14,8 @@ const Card: React.FC<Wine> = ({ id, image, name, price, discount, priceMember, p
   const priceVip = priceMember.toFixed(2);
   const integer = Math.trunc(priceMember);
   const decimal = priceVip.substring(priceVip.length-2, priceVip.length);
-
-
+  const priceNonVip = priceNonMember.toFixed(2).replace(".", ",");
+  const defaultPrice = price.toFixed(2).replace(".", ",");
   
   return (
     <CardContainer key={id} >
@@ -23,14 +23,14 @@ const Card: React.FC<Wine> = ({ id, image, name, price, discount, priceMember, p
       <CardIcon src="/selo.png"/>
       <NameText>{name}</NameText>
       <WrapperH>
-        <PriceText style={ { textDecoration:"line-through" }}>R$ {price.toFixed(2).replace(".", ",")}</PriceText>
+        <PriceText decor>R$ {defaultPrice}</PriceText>
         <DiscountText>{discount}% OFF</DiscountText>
       </WrapperH>
       <WrapperH>
         <PriceText color="black">Sócio Wine</PriceText>
           <PriceText color="pink">R$<VipPriceText>{integer}</VipPriceText>,{decimal}</PriceText>
       </WrapperH>
-        <PriceText>NÃO SÓCIO R$ {priceNonMember.toFixed(2).replace(".", ",")}</PriceText>
+        <PriceText>NÃO SÓCIO R$ {priceNonVip}</PriceText>
     </CardContainer>
   );
 };

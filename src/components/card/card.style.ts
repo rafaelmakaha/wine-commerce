@@ -3,6 +3,7 @@ import color from "../../../public/colors.json";
 
 interface Props {
   color?: string;
+  decor?: boolean;
 }
 
 export const CardContainer = styled.div`
@@ -17,6 +18,7 @@ export const CardContainer = styled.div`
   font-family: "Lato", sans-serif;
   font-weight: 700;
   text-align: center;
+  cursor: pointer;
 `;
 
 export const CardImage = styled.img`
@@ -37,6 +39,7 @@ export const CardIcon = styled.img`
 
 export const NameText = styled.p`
   width: 90%;
+  height: 40px;
   font-size: 16px;
   color: ${color.neutrals.black};
   overflow-wrap: break-word;
@@ -61,6 +64,7 @@ export const PriceText = styled.p<Props>`
         `;
     }
   }}
+  text-decoration: ${props => props.decor ? "line-through" : ""};
 `;
 
 export const DiscountText = styled.p`
